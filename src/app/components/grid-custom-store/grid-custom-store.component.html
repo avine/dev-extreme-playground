@@ -1,5 +1,7 @@
 <dx-data-grid class="app-grid-custom-store__container"
-  [dataSource]="dataSource">
+  [dataSource]="dataSource"
+  [cacheEnabled]="false"
+  >
   <dxi-column dataField="OrderNumber"></dxi-column>
   <dxi-column dataField="OrderDate"></dxi-column>
   <dxi-column dataField="StoreCity"></dxi-column>
@@ -7,7 +9,7 @@
   <dxi-column dataField="Employee"></dxi-column>
   <dxi-column dataField="SaleAmount" format="currency"></dxi-column>
   <dxo-remote-operations
-    [grouping]="true">
+    [paging]="true">
   </dxo-remote-operations>
   <dxo-paging [pageSize]="12"></dxo-paging>
   <dxo-pager

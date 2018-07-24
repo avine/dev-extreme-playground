@@ -15,6 +15,28 @@ export class GridCustomStoreComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.dataSource = new DataSource({
+      load: (options: any) => {
+        const skip = options.skip || 0;
+        const take = options.take || 12;
+        console.log(skip, take, options);
+
+        return this.getData()
+          .toPromise()
+          .then((data: any) => {
+            return {
+              data: data.items.slice(skip, skip + take),
+              totalCount: data.totalCount
+            };
+          })
+          .catch(error => {
+            throw new Error('Data Loading Error');
+          });
+      }
+    });
+  }
+
+  /*ngOnInit() {
     const customStore = new CustomStore({
       load: (options: any) => {
         const skip = options.skip || 0;
@@ -24,17 +46,10 @@ export class GridCustomStoreComponent implements OnInit {
         return this.getData()
           .toPromise()
           .then((data: any) => {
-            if (!options.group) {
-              return {
-                data: data.items.slice(skip, skip + take),
-                totalCount: data.totalCount
-              };
-            } else {
-              return {
-                key: 'Nevada',
-                items: data.items.slice(skip, skip + take)
-              };
-            }
+            return {
+              data: data.items.slice(skip, skip + take),
+              totalCount: data.totalCount
+            };
           })
           .catch(error => {
             throw new Error('Data Loading Error');
@@ -42,7 +57,7 @@ export class GridCustomStoreComponent implements OnInit {
       }
     });
     this.dataSource.store = customStore as any;
-  }
+  }*/
 
   getData() {
     return this.http.get<DataSpi>('assets/data.json');
