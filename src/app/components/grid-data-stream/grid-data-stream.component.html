@@ -9,13 +9,18 @@
   <dxi-column dataField="Employee"></dxi-column>
   <dxi-column dataField="SaleAmount" format="currency"></dxi-column>
 
-  <dxo-remote-operations [paging]="true"></dxo-remote-operations>
+  <dxo-load-panel [enabled]="false"></dxo-load-panel>
 
-  <dxo-paging [pageSize]="12"></dxo-paging>
+  <dxo-remote-operations
+    [paging]="true"
+    [sorting]="true">
+  </dxo-remote-operations>
+
+  <dxo-paging [pageSize]="60"></dxo-paging>
 
   <dxo-pager
     [showPageSizeSelector]="true"
-    [allowedPageSizes]="[20, 50, 100]">
+    [allowedPageSizes]="[15, 30, 60, 90]">
   </dxo-pager>
 
   <dxo-grouping [contextMenuEnabled]="true"></dxo-grouping>

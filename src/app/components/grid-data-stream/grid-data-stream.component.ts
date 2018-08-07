@@ -25,8 +25,11 @@ export class GridDataStreamComponent implements OnInit, OnDestroy {
 
     this.dataSource = new DataSource({
       load: (options: any) => {
-        console.log(options.skip, options.take);
-        return Promise.resolve({ totalCount: 100, data: this.data });
+        this.dataStreamService.size = options.take;
+
+        console.log(options.skip, options.take, JSON.stringify(options.sort));
+
+        return Promise.resolve({ totalCount: 90, data: this.data });
       }
     });
   }

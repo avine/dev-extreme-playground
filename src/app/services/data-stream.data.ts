@@ -628,25 +628,4 @@ export default [{
   'StoreState': 'California',
   'Employee': 'Clark Morgan',
   'OrderDate': '2015/11/22'
-}, {
-  'OrderNumber': 218867,
-  'SaleAmount': 14200,
-  'StoreCity': 'Las Vegas',
-  'StoreState': 'Nevada',
-  'Employee': 'Harv Mudd',
-  'OrderDate': '2015/12/03'
-}, {
-  'OrderNumber': 222974,
-  'SaleAmount': 17300,
-  'StoreCity': 'Phoenix',
-  'StoreState': 'Arizona',
-  'Employee': 'Harv Mudd',
-  'OrderDate': '2015/12/05'
-}, {
-  'OrderNumber': 238477,
-  'SaleAmount': 6550,
-  'StoreCity': 'Phoenix',
-  'StoreState': 'Arizona',
-  'Employee': 'Harv Mudd',
-  'OrderDate': '2015/12/14'
 }];

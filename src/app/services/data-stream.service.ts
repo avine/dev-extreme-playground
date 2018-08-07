@@ -8,14 +8,15 @@ import DATA from './data-stream.data';
   providedIn: 'root'
 })
 export class DataStreamService {
+  size: 10;
+
   message$ = interval(2000).pipe(map(number => this.dataSlice));
 
   constructor() {
   }
 
   get dataSlice() {
-    const size = 10;
-    const start = Math.round(Math.random() * DATA.length - size);
-    return DATA.slice(start, start + size);
+    const start = Math.round(Math.random() * (DATA.length - this.size));
+    return DATA.slice(start, start + this.size);
   }
 }
