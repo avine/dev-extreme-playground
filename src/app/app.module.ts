@@ -7,14 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { GridDataSourceComponent } from './components/grid-data-source/grid-data-source.component';
+import { GridDataStreamComponent } from './components/grid-data-stream/grid-data-stream.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
-    MenuComponent,
-    GridDataSourceComponent
+    GridDataStreamComponent,
+    GridDataSourceComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

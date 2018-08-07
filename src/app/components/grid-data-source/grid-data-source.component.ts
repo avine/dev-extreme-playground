@@ -19,8 +19,6 @@ export class GridDataSourceComponent implements OnInit, OnDestroy {
       load: (options: any) => {
         const skip = options.skip || 0;
         const take = options.take || 12;
-        console.log(skip, take, options);
-
         return this.getData()
           .toPromise()
           .then((data: any) => {

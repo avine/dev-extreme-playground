@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { GridDataSourceComponent } from './components/grid-data-source/grid-data-source.component';
+import { GridDataStreamComponent } from './components/grid-data-stream/grid-data-stream.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'grid-data-source',
     component: GridDataSourceComponent
+  },
+
+  {
+    path: 'grid-data-stream',
+    component: GridDataStreamComponent
   },
 ];
 
