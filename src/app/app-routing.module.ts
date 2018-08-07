@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
-import { GridCustomStoreComponent } from './components/grid-custom-store/grid-custom-store.component';
+import { GridDataSourceComponent } from './components/grid-data-source/grid-data-source.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,8 @@ const routes: Routes = [
   },
 
   {
-    path: 'grid-custom-store',
-    component: GridCustomStoreComponent
+    path: 'grid-data-source',
+    component: GridDataSourceComponent
   },
 ];
 

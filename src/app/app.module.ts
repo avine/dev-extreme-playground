@@ -1,21 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { DxChartModule, DxDataGridModule, DxTooltipModule } from 'devextreme-angular';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
-import { AppRoutingModule } from './app-routing.module';
-
-import { DxChartModule, DxDataGridModule, DxTooltipModule } from 'devextreme-angular';
+import { GridDataSourceComponent } from './components/grid-data-source/grid-data-source.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { GridCustomStoreComponent } from './components/grid-custom-store/grid-custom-store.component';
-import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarChartComponent,
     MenuComponent,
-    GridCustomStoreComponent
+    GridDataSourceComponent
   ],
   imports: [
     BrowserModule,
